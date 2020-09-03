@@ -20,9 +20,7 @@ export interface IMovie {
 }
 export default function Movie(props: IMovie) {
     const showLink = isValidUrl(props.baseAdditionalInfoUrl);
-    // function deleteHandler() {
-    //     props.deleteMovie(props.id)
-    // }
+
     return <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" src={props.poster} />
         <Card.Body>
