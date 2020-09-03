@@ -9,7 +9,7 @@ interface IProps {
 export default function Filter(props: IProps) {
     const [filterValue, setFilterValue] = useState("")
     const { filterOperation } = props;
-    console.log("filter render")
+
     return <div>
         <InputGroup className="mb-3">
             <FormControl
@@ -17,6 +17,7 @@ export default function Filter(props: IProps) {
                 aria-describedby="basic-addon1"
                 onChange={(e) => setFilterValue(e.target.value)}
                 value={filterValue}
+                placeholder={"Search on this website"}
             />
             <Button onClick={() => { filterOperation(filterValue) }}> Filter </Button>
             <Button onClick={() => {

@@ -21,7 +21,6 @@ export default class Configuration extends React.Component<IProps, IState> {
 
     constructor(props: IProps) {
         super(props)
-        console.log("Configuration constructor")
         this.state = { color: props.color }
     }
 
@@ -34,24 +33,20 @@ export default class Configuration extends React.Component<IProps, IState> {
     }
 
     componentDidMount() {
-        console.log("Configuration componentDidMount")
     }
 
     componentDidUpdate() {
 
-        console.log("Configuration componentDidUpdate")
     }
 
     shouldComponentUpdate(props: any, nextState: any) {
         // const newColorWithoutSpaces = nextState.color.replace(/ /g, "");
 
-        console.log("Configuration shouldComponentUpdate")
         if (nextState.color === this.state.color) return false;
         return true;
     }
 
     render() {
-        console.log("Configuration render")
         return <Accordion defaultActiveKey="0">
             <Card>
                 <Card.Header>
